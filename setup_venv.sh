@@ -22,5 +22,5 @@ echo "--- ✅ Tudo pronto! ---"
 echo "Para ativar no Fish, use: source $VENV_NAME/bin/activate.fish"
 echo "Para ativar no Bash, use: source $VENV_NAME/bin/activate"
 
-echo "No Arch Linux ou CachyOS Linux, podes criar uma abreviação para o comando de ativação:"
+echo "No Arch Linux ou CachyOS Linux, podes criar uma abreviação para o comando de ativação. Por exemplo, se seu terminal for o Fish:"
 echo "abbr --add venv_start 'source $VENV_NAME/bin/activate.fish'"

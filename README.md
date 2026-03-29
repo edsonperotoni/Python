@@ -49,4 +49,7 @@ PyQt5: É a ferramenta que permite ao Python "desenhar" a janela do gráfico no 
 
 Notação Científica: Você verá números como 1.83e-02. Isso é apenas 0.0183. O e-02 diz para você "pular" a vírgula duas casas para a esquerda.
 
-Exploração matemática feita de forma simples! 🎓
+
+⚠️ Isenção de Responsabilidade
+
+O uso dos scripts incluídos neste repositório é de sua inteira responsabilidade. Embora o código tenha sido desenvolvido para fins educativos e testado em ambientes controlados, não garantimos que ele seja isento de erros ou compatível com todas as configurações de sistema. Não nos responsabilizamos por quaisquer danos, instabilidades no sistema operacional ou perda de dados resultantes da execução dos scripts de automação ou da instalação de dependências de terceiros. Recomenda-se sempre revisar scripts de terminal antes da execução.

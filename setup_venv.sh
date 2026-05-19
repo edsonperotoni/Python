@@ -15,7 +15,7 @@ else
 fi
 
 # 3. Atualiza o gerenciador de pacotes e instala as bibliotecas
-echo "> Instalando dependências (Matplotlib, Numpy, PyQt5)..."
+echo "> Instalando dependências ..."
 # Usamos o caminho direto do pip dentro da venv para garantir que instale no lugar certo
 ./$VENV_NAME/bin/pip install --upgrade pip
 ./$VENV_NAME/bin/pip install -r requirements.txt
@@ -27,6 +27,4 @@ echo "Para ativar no Bash, use: source $VENV_NAME/bin/activate"
 # Dica para usuários de Arch/CachyOS ou qualquer um com shell Fish
 echo ""
 echo "No Arch Linux ou CachyOS Linux, podes criar uma abreviação para o comando de ativação:"
-echo "abbr --add venv_start 'source $VENV_NAME/bin/activate.fish'"
-# Em vez de apenas chamar o arquivo, usamos o comando '.' (ou source)
-source ./.venv/bin/activate.fish 2>/dev/null || echo "Aviso: Ative o venv manualmente com 'source .venv/bin/activate.fish'"
+echo "abbr --add venv_up 'source $VENV_NAME/bin/activate.fish'"

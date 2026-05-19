@@ -9,6 +9,21 @@ Configuração Automática: O script cria um ambiente virtual para que as biblio
 Instalação de Dependências: Baixa e instala o Numpy, Matplotlib e PyQt5.
 
 Geração de Gráfico: Cria uma imagem profissional com anotações automáticas e notação científica.
+# 🚀 Como Executar no WSL2 (Windows 11 + Arch Linux)
+
+Para rodar scripts Python que abrem janelas gráficas (como o `plt.show()` do Matplotlib) dentro do WSL2 usando o Arch Linux, precisamos garantir que o sistema operacional tenha os pacotes de interface e fontes corretos.
+
+### Pré-requisitos do Sistema (Arch Linux no WSL)
+
+Antes de ativar o seu ambiente virtual, instale as dependências nativas necessárias via `pacman` no seu terminal do Arch:
+
+```bash
+# 1. Instalar os bindings do Qt5 e suporte a imagens do sistema
+sudo pacman -S python-pyqt5 python-pillow
+
+# 2. Instalar fontes do sistema (essencial para o WSLg renderizar os textos do gráfico)
+sudo pacman -S gnu-free-fonts
+```
 
 🛠️ Configuração do Ambiente (Linux/macOS)
 

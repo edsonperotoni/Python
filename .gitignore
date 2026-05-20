@@ -1,0 +1,10 @@
+# Ambiente virtual
+.venv/
+
+# Gráficos e arquivos gerados
+grafico_decaimento.png
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class

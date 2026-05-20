@@ -1,10 +1,19 @@
+import os
 import matplotlib
-matplotlib.use('Qt5Agg')
+# Configura o backend para Qt5 se houver display disponível, senão usa Agg (headless)
+try:
+    if 'DISPLAY' in os.environ or os.name == 'nt':
+        matplotlib.use('Qt5Agg')
+    else:
+        matplotlib.use('Agg')
+except Exception:
+    matplotlib.use('Agg')
+
 import matplotlib.pyplot as plt
 import numpy as np
 
-# 1. Gerar os dados (100 pontos: índices de 0 a 99)
-x = np.linspace(0, 10, 100)
+# 1. Gerar os dados (101 pontos: índices de 0 a 100 para corresponder a inteiros)
+x = np.linspace(0, 10, 101)
 y = np.exp(-x)
 
 # 2. Configurar o gráfico
@@ -18,14 +27,15 @@ plt.ylabel('Eixo Y')
 plt.grid(True, which='both', linestyle='--', alpha=0.5)
 plt.legend()
 
-# 3. Adicionar Anotações (Corrigindo o índice 100 para 99)
+# Ajustar limites do eixo Y para dar espaço para as anotações
+plt.ylim(-0.05, 1.15)
+
+# 3. Adicionar Anotações
 print("Gerando gráfico...")
-# Usamos 99 para pegar o último valor da lista
-# ... (seu código anterior até o loop) ...
 
 # Escolhemos alguns índices para mostrar 
-# Índices que queremos marcar
-indices = [0, 20, 40, 60, 80, 99]
+# Índices que queremos marcar (correspondentes aos inteiros 0, 2, 4, 6, 8, 10)
+indices = [0, 20, 40, 60, 80, 100]
 
 for i in indices:
     if i == 0:
